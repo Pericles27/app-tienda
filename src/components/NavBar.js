@@ -23,7 +23,7 @@ const NavBar = () => (
     <nav>
         <ul style={estilos}>
             <li style={logo}>
-                NH Finance
+                <a href="../app.js" style={{textDecoration:'none',color:'inherit'}}>NH Finance</a>
             </li>
             <li style={alineados}>
                 Home
