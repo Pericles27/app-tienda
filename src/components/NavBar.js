@@ -1,3 +1,5 @@
+import CartWidget from './CartWidget';
+
 let estilos={
     marginTop:0,
     fontSize: 40,
@@ -8,10 +10,10 @@ let estilos={
     marginLeft: 5,
     marginRight: 5,
 }
+
 let alineados={
     display: 'inline',
     color:'#05445E',
-    margin: 15,
 }
 let logo ={
     display:'inline',
@@ -39,6 +41,9 @@ const NavBar = () => (
             </li>
             <li style={alineados}>
                 About Us
+            </li>
+            <li style={alineados}>
+                <CartWidget/>
             </li>
         </ul>
     </nav>
