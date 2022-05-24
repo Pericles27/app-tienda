@@ -1,14 +1,9 @@
 import CartWidget from './CartWidget';
+import 'bootstrap/dist/css/bootstrap.css';
 
 let estilos={
-    marginTop:0,
-    fontSize: 40,
+    color:'white',
     backgroundColor:'#189AB4',
-    display:'flex',
-    alignItems: 'center',
-    justifyContent:'space-between',
-    marginLeft: 5,
-    marginRight: 5,
 }
 
 let alineados={
@@ -19,33 +14,32 @@ let logo ={
     display:'inline',
     fontFamily:'fantasy',
     color:'black',
-    fontSize:50,
+    fontSize: 40,
 }
 const NavBar = () => (
-    <nav>
-        <ul style={estilos}>
-            <li style={logo}>
-                <a href="../app.js" style={{textDecoration:'none',color:'inherit'}}>NH Finance</a>
-            </li>
-            <li style={alineados}>
-                Home
-            </li>
-            <li style={alineados}>
-                Crypto
-            </li>
-            <li style={alineados}>
-                Stocks
-            </li>
-            <li style={alineados}>
-                NFT's
-            </li>
-            <li style={alineados}>
-                About Us
-            </li>
-            <li style={alineados}>
+    <nav className="navbar navbar-default" style={{width:'100%'}}>
+        <div className="container">
+            <div className='navbar-header' style={logo}>
+                <a href="../app.js" style={{textDecoration:'none',color:'inherit'}}>Sport Hub</a>
+            </div>
+            <ul className="nav">
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Camisetas Internacionales</a>
+                </li>
+                <li className="nav-item">
+                    <a class="nav-link" href="#">Camisetas nacionales</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Botines y accesorios</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">About us</a>
+                </li>
+            </ul>
+            <div className='navbar-footer'>
                 <CartWidget/>
-            </li>
-        </ul>
+            </div>
+        </div>
     </nav>
 );
 

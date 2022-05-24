@@ -1,6 +1,6 @@
 import React from "react";
 let carrito={
-    height:100,
+    height:50,
     marginRight :10,
     display: 'flex',
     alignItems:'center',
