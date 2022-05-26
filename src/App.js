@@ -18,15 +18,15 @@ function App() {
   const productos = [
     {
       title : 'Camiseta Boca Titular',
-      price : 20000,
+      price : 17500,
       image : 'boca.jpg',
       description: 'Camiseta titular de club atletico Boca Juniors tamaño adulto',
-      stock: 3,
+      stock: 4,
       id: 1
     },
     {
       title : 'Camiseta Argentina Visitante',
-      price : 3500,
+      price : 20000,
       image : 'arg.jpg',
       description: '',
       stock: 5,
@@ -34,7 +34,7 @@ function App() {
     },
     {
       title : 'Camiseta River Titular',
-      price : 2000,
+      price : 15000,
       image : 'river.jpg',
       description: '',
       stock: 10,
@@ -42,11 +42,11 @@ function App() {
     },
     {
       title : 'Camiseta Alemania Titular',
-      price : 2000,
+      price : 12000,
       image : 'ger.jpg',
       description: '',
       stock: 10,
-      id: 3
+      id: 4
     },
   ]
 
@@ -81,12 +81,7 @@ function App() {
 
     <div className='general-container'>
       <CardList title={'Productos Recomendados'} products={productos}/>
-      {/* <CardList title={'Productos Relacionados'}/> */}
     </div>
-    <div>
-      <button onClick={() => setOpen(true)}>Abrir modal</button>
-    </div> 
-
   </body>
 </>;
 }

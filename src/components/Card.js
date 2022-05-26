@@ -4,7 +4,6 @@ import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
 import Modal from './Modal'
 
-//Functional Component
 const CardItem = ({ image, title, price, stock }) => {
     const [open, setOpen] = useState(false)
     const [count, setCount] = useState(1)
