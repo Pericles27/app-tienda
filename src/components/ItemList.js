@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import CardItem from './Item'
 import { Grid } from '@mui/material';
 
