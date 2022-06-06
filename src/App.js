@@ -11,7 +11,6 @@ function App() {
   <body style={{backgroundColor: '#D4F1F4'}}>
     <NavBar/>
     <Greeting/>
-
     <div className='general-container'>
       <CardList title={'Productos Recomendados'} products={productos}/>
     </div>

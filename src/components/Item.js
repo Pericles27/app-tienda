@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
-import Modal from './Modal'
+import Modal from './Modal';
+import { Link } from 'react-router-dom';
 
-const CardItem = ({ image, title, price, stock }) => {
+const CardItem = ({ image, title, price, stock, id }) => {
     const [open, setOpen] = useState(false)
     const [count, setCount] = useState(1)
 
@@ -22,6 +23,7 @@ const CardItem = ({ image, title, price, stock }) => {
             setCount(count - 1)
         }
     }
+
 
     return(
         <Card sx={{ minWidth: 275 }} className="card-item-container">
@@ -45,13 +47,6 @@ const CardItem = ({ image, title, price, stock }) => {
                     </div>
                 </div>
             </CardContent>
-            {open && (
-
-                <Modal handleClose={handleClose} open={open}>
-                <h2>Detalle</h2>
-                <img src={`./${image}`} alt={"producto"} /> 
-                </Modal>
-            ) }
         </Card>
     )
 }
