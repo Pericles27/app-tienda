@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import  productos  from '../utils/prodMock';
+import CardList from '../components/ItemList';
 
 function Greeting(props) {
   const [products, setProducts] = useState([])
@@ -25,6 +27,12 @@ function Greeting(props) {
       console.log("Finally: termino la promesa")
     })
   }, [])
+
+  return<>
+    <div className='general-container'>
+      < CardList title={'Productos Recomendados'} products={productos}/>
+    </div>
+  </>
 };
 export default Greeting
   
