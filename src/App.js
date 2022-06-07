@@ -1,21 +1,26 @@
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';
-import Greeting from './components/ItemListContainer';
-import CardList from './components/ItemList';
 import NavBar from "./components/NavBar";
-import  productos  from './utils/prodMock';
+import Home from './pages/home';
+import Detalle from './pages/Detalle';
+import Contacto from './pages/contacto';
+import NotFound from './pages/NotFound';
 
 
 function App() {
-  return <>
-  <body style={{backgroundColor: '#D4F1F4'}}>
-    <NavBar/>
-    <Greeting/>
-    <div className='general-container'>
-      <CardList title={'Productos Recomendados'} products={productos}/>
+  return (
+    <div className='App'>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path='/contacto' element={<Contacto />}/>  
+          <Route path='/product/:id' element={<Detalle />} />
+          <Route path='*' element={<NotFound />}/> 
+          <Route path='/' element={<Home />}/>  
+        </Routes>
+      </BrowserRouter>
     </div>
-  </body>
-</>;
+  );
 }
 
 export default App;
