@@ -1,8 +1,35 @@
-import CardItem from './Item'
+import CardItem from './Item';
 import { Grid } from '@mui/material';
+import { useState, useEffect } from 'react';
+import productos from '../utils/prodMock';
+import { useParams, useNavigate } from 'react-router-dom'
 
-const CardList = ({title, products}) => {
+const CardList = ({title}) => {
+    const [products, setProducts] = useState([])
+    const { category } = useParams()
+
+    useEffect( () => {
+        setProducts([])
+//         getProducts()
+        // .then( (response) => {
+            category ? filterByCategory(productos, category) : setProducts(productos)
+        // })
+    }, [category])
+
     
+    // const getProducts = () => {
+    //     return new Promise( (resolve, reject) => {
+    //             resolve(productos)
+    //     })
+    // }  
+
+    const filterByCategory = (array, category) => {
+        return array.map( (item) => {
+            if(item.category === category) {
+                return setProducts(products => [...products, item])
+            }
+        })
+    }
     return(
         <>
         <h2>{title}</h2>

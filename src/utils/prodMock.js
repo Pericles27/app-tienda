@@ -5,7 +5,8 @@ const productos = [
       image : 'boca.jpg',
       description: 'Camiseta titular de club atletico Boca Juniors tamaño adulto',
       stock: 4,
-      id: 1
+      id: 1,
+      category: 'camisetas nacionales',
     },
     {
       title : 'Camiseta Argentina Visitante',
@@ -13,7 +14,8 @@ const productos = [
       image : 'arg.jpg',
       description: '',
       stock: 5,
-      id: 2
+      id: 2,
+      category:'camisetas internacionales',
     },
     {
       title : 'Camiseta River Titular',
@@ -21,7 +23,8 @@ const productos = [
       image : 'river.jpg',
       description: '',
       stock: 7,
-      id: 3
+      id: 3,
+      category:'camisetas nacionales',
     },
     {
       title : 'Camiseta Boca jr titular 20/21',
@@ -29,7 +32,8 @@ const productos = [
       image : 'boke.jpg',
       description: '',
       stock: 15,
-      id: 4
+      id: 4,
+      category:'camisetas nacionales',
     },
     {
         title : 'Camiseta España Titular',
@@ -37,7 +41,8 @@ const productos = [
         image : 'esp.jpg',
         description: '',
         stock: 2,
-        id: 4
+        id: 5,
+        category:'camisetas internacionales',
     },
     {
         title : 'Camiseta Manchester United Visitante',
@@ -45,7 +50,8 @@ const productos = [
         image : 'manu.jpg',
         description: '',
         stock: 9,
-        id: 4
+        id: 6,
+        category:'camisetas internacionales',
     },
     {
         title : 'Camiseta Alemania Titular',
@@ -53,8 +59,72 @@ const productos = [
         image : 'ger.jpg',
         description: '',
         stock: 10,
-        id: 4
+        id: 7,
+        category:'camisetas internacionales',
     },
+    {
+      title : 'Camiseta Racing Titular',
+      price : 12000,
+      image : 'rac.jpg',
+      description: '',
+      stock: 22,
+      id: 8,
+      category:'camisetas nacionales',
+  },
+  {
+    title : 'Camiseta Estudiantes Titular',
+    price : 12000,
+    image : 'est.jpg',
+    description: '',
+    stock: 15,
+    id: 9,
+    category:'camisetas nacionales',
+},
+{
+  title : 'Camiseta Paris Saint Germain Titular',
+  price : 12000,
+  image : 'psg.jpg',
+  description: '',
+  stock: 4,
+  id: 10,
+  category:'camisetas internacionales',
+},
+{
+  title : 'Botines Adidas Predator 4',
+  price : 8500,
+  image : 'predator.jpg',
+  description: '',
+  stock: 3,
+  id: 11,
+  category:'botines',
+},
+{
+  title : 'Botines Adidas Nemeziz',
+  price : 11000,
+  image : 'nemeziz.jpg',
+  description: '',
+  stock: 7,
+  id: 12,
+  category:'botines',
+},
+{
+  title : 'Botines Adidas Predator 3',
+  price : 9499,
+  image : 'predator3.jpg',
+  description: '',
+  stock: 8,
+  id: 13,
+  category:'botines',
+},
+{
+  title : 'Botines Adidas Predator 1',
+  price : 12500,
+  image : 'predator1.jpg',
+  description: '',
+  stock: 9,
+  id: 14,
+  category:'botines',
+},
 ]
 
 

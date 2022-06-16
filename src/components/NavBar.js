@@ -21,7 +21,7 @@ let logo ={
 }
 const NavBar = () => {
 
-    const categories = ["musculosas", "remeras", "pantalones"];
+    const categories = ["camisetas internacionales", "camisetas nacionales", "botines"];
 
     return(
         <AppBar position="static" className='header-primary'>
@@ -30,36 +30,19 @@ const NavBar = () => {
                     <h1>SportsHub</h1>
                 </div>
                 <ul className="navbar" >
-                    <li className="nav-item">
-                        <Button 
-                            disableRipple
-                            style={{ backgroundColor: 'transparent' }} 
-                            variant='text' 
-                            className='navbar__btn'
-                        >
-                            <Link to="/" style={estilos}>Camisetas Internacionales</Link>
-                        </Button>    
-                    </li>
-                    <li className="nav-item">
-                        <Button 
-                            disableRipple
-                            style={{ backgroundColor: 'transparent' }} 
-                            variant='text' 
-                            className='navbar__btn'
-                        >
-                            <Link to="/" style={estilos}>Camisetas Nacionales</Link>
-                        </Button>    
-                    </li>
-                    <li className="nav-item">
-                        <Button 
-                            disableRipple
-                            style={{ backgroundColor: 'transparent' }} 
-                            variant='text' 
-                            className='navbar__btn'
-                        >
-                            <Link to="/" style={estilos}>Botines y Accesorios</Link>
-                        </Button>
-                    </li>
+                    {categories.map( (cat) => {
+                        return(                 
+                            <li className="nav-item">
+                                <Button 
+                                    disableRipple
+                                    style={{ backgroundColor: 'transparent' }} 
+                                    variant='text' 
+                                    className='navbar__btn'
+                                >
+                                    <Link to={`/products/${cat}`} style={estilos}>{cat}</Link>
+                                </Button>    
+                            </li>)
+                    })}
                     <li className="nav-item">
                         <Button 
                             disableRipple

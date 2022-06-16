@@ -29,11 +29,11 @@ const CardItem = ({ image, title, price, stock, id }) => {
 
 
     return(
-        <Card sx={{ minWidth: 275 }} className="card-item-container">
+        <Card sx={{ minWidth: 275, height: 550 }} className="card-item-container">
             <CardContent>
                 <div className="card-item">
                     <div className="card-item__img-box">
-                        <img src={`./${image}`} alt={"producto"} style={{width:'100%'}}/> 
+                        <img src={`/${image}`} alt={"producto"} style={{width:'75%'}}/> 
                                                 <Button variant={'contained'} className="card-btn-details">
                             <Link to={`/product/${id}`} style={enlaces}>Ver Detalle</Link>
                         </Button>
