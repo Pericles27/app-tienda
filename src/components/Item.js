@@ -3,6 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+import Counter from './ItemCount';
 const enlaces={
     textDecoration:'none',
     color:'white',
@@ -43,11 +44,7 @@ const CardItem = ({ image, title, price, stock, id }) => {
                             <p>{title}</p>
                             <span>$ {price}</span>
                         </div>
-                        <div className='count-item'>
-                            <Button onClick={removeCount}>-</Button>
-                            <p>{count}</p>
-                            <Button onClick={addCount}>+</Button>
-                        </div>
+                        <Counter stock={stock}/>
                         <Button variant={'contained'} className="card-item-button">Comprar</Button>
                     </div>
                 </div>

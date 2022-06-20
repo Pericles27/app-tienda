@@ -2,6 +2,7 @@ import { useState } from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Counter from './ItemCount';
 
 const ItemDetail = ({data}) => {
     const [size, setSize] = useState('');
@@ -28,6 +29,7 @@ const ItemDetail = ({data}) => {
                     <button className='color-selector green'></button>
                     <button className='color-selector red'></button>
                 </div>
+                <Counter stock={data.stock}/>
                 <label>Selecciona tu talle</label>
                 <Select
                     className='select-custom'
