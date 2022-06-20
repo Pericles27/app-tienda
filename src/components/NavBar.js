@@ -27,7 +27,9 @@ const NavBar = () => {
         <AppBar position="static" className='header-primary'>
             <Toolbar>
                 <div className='navbar-header' style={logo}>
-                    <h1>SportsHub</h1>
+                    <Link to='/' style={{textDecoration:'none'}}>
+                        <h1 style={logo}>SportsHub</h1>
+                    </Link>
                 </div>
                 <ul className="navbar" >
                     {categories.map( (cat) => {
