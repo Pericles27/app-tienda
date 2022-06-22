@@ -3,9 +3,13 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Counter from './ItemCount';
+import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({data}) => {
     const [size, setSize] = useState('');
+    const [cantidad, setCantidad] = useState(1)
+    const [showButton, setShowButton] = useState(false);
 
     const handleChange = (event) => {
         setSize(event.target.value);
@@ -29,7 +33,16 @@ const ItemDetail = ({data}) => {
                     <button className='color-selector green'></button>
                     <button className='color-selector red'></button>
                 </div>
-                <Counter stock={data.stock}/>
+                {!showButton ?
+                <Counter
+                    stock={data.stock}
+                    cantidad={cantidad}
+                    setShowButton={setShowButton}
+                    setCantidad={setCantidad}
+                />
+                :
+                <Button variant='outlined'><Link to='/cart'>Termina mi compra</Link></Button>
+                }
                 <label>Selecciona tu talle</label>
                 <Select
                     className='select-custom'
