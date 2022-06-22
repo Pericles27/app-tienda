@@ -28,10 +28,22 @@ const ItemDetail = ({data}) => {
                 </div>
                 <p>{data.price}</p>
                 <span>3 Cuotas sin interés de $ {data.price / 3}</span>
-                <div className='color-group-selector'>
-                    <button className='color-selector black'></button>
-                    <button className='color-selector green'></button>
-                    <button className='color-selector red'></button>
+                <div style={{padding:10}}>
+                    <label>Selecciona tu talle</label>
+                    <Select
+                        className='select-custom'
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={size}
+                        placeholder="Selecciona tu talle"
+                        onChange={handleChange}
+                        >
+                        <MenuItem value={'s'}>S</MenuItem>
+                        <MenuItem value={'m'}>M</MenuItem>
+                        <MenuItem value={'l'}>L</MenuItem>
+                        <MenuItem value={'xl'}>XL</MenuItem>
+                        <MenuItem value={'xxl'}>XXL</MenuItem>
+                    </Select>
                 </div>
                 {!showButton ?
                 <Counter
@@ -41,23 +53,8 @@ const ItemDetail = ({data}) => {
                     setCantidad={setCantidad}
                 />
                 :
-                <Button variant='outlined'><Link to='/cart'>Termina mi compra</Link></Button>
+                <Button variant='outlined'><Link to='/cart'>Terminar mi compra</Link></Button>
                 }
-                <label>Selecciona tu talle</label>
-                <Select
-                    className='select-custom'
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={size}
-                    placeholder="Selecciona tu talle"
-                    onChange={handleChange}
-                    >
-                    <MenuItem value={'s'}>S</MenuItem>
-                    <MenuItem value={'m'}>M</MenuItem>
-                    <MenuItem value={'l'}>L</MenuItem>
-                    <MenuItem value={'xl'}>XL</MenuItem>
-                    <MenuItem value={'xxl'}>XXL</MenuItem>
-                </Select>
             </div>
         </div>
     )

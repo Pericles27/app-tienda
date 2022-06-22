@@ -13,6 +13,7 @@ const orden ={
 const imagen ={
     width : '75%',
     padding: 10,
+    maxHeight:300,
 }
 
 const CardItem = ({ image, title, price, stock, id }) => {
@@ -20,12 +21,12 @@ const CardItem = ({ image, title, price, stock, id }) => {
     const [count, setCount] = useState(1)
 
     return(
-        <Card sx={{ minWidth: 275, height: 500 }} className="card-item-container">
+        <Card sx={{ minWidth: 275, height: 550 }} className="card-item-container">
             <CardContent>
                 <div className="card-item">
                     <div className="card-item__img-box" style={orden}>
                         <img src={`/${image}`} alt={"producto"} style={imagen}/> 
-                                                <Button variant={'contained'} className="card-btn-details">
+                        <Button variant={'contained'} className="card-btn-details">
                             <Link to={`/product/${id}`} style={enlaces}>Ver Detalle</Link>
                         </Button>
                     </div>

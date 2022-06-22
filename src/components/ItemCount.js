@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Button } from '@mui/material';
 
 const Counter = ({stock,cantidad, setCantidad, setShowButton}) => { 
