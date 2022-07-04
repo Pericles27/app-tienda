@@ -2,7 +2,7 @@ import { useState } from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import Counter from './ItemCount';
+import Counter from '../ItemCount/ItemCount';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
@@ -51,6 +51,7 @@ const ItemDetail = ({data}) => {
                     cantidad={cantidad}
                     setShowButton={setShowButton}
                     setCantidad={setCantidad}
+                    data={data}
                 />
                 :
                 <Button variant='outlined'><Link to='/cart'>Terminar mi compra</Link></Button>

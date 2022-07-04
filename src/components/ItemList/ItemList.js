@@ -1,7 +1,7 @@
-import CardItem from './Item';
+import CardItem from '../Item/Item';
 import { Grid } from '@mui/material';
 import { useState, useEffect } from 'react';
-import productos from '../utils/prodMock';
+import productos from '../../utils/prodMock';
 import { useParams, useNavigate } from 'react-router-dom'
 
 const CardList = ({title}) => {

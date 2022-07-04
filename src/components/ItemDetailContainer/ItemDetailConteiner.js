@@ -1,6 +1,6 @@
 import { useEffect, useState} from "react"
-import ItemDetail from "./ItemDetail"
-import productos from '../utils/prodMock'
+import ItemDetail from "../ItemDetail/ItemDetail"
+import productos from '../../utils/prodMock'
 import { useParams, useNavigate } from "react-router-dom"
 
 const ItemDetailContainer = () => {

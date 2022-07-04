@@ -1,4 +1,4 @@
-import CardList from "../components/ItemList";
+import CardList from "../components/ItemList/ItemList";
 
 const ProductList = () => {
     return(

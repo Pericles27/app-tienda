@@ -1,4 +1,4 @@
-import CardList from "../components/ItemList"
+import CardList from "../components/ItemList/ItemList"
 import { useEffect, useState } from "react"
 import productos from "../utils/prodMock"
 

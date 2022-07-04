@@ -1,8 +1,10 @@
+import './NavBar.css'
 import  { Link }  from 'react-router-dom';
-import CartWidget from './CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 import Button from '@mui/material/Button';
 import 'bootstrap/dist/css/bootstrap.css';
 import { AppBar, Toolbar } from '@mui/material';
+
 
 let estilos={
     color:'white',
@@ -20,7 +22,6 @@ let logo ={
     fontSize: 40,
 }
 const NavBar = () => {
-
     const categories = ["camisetas internacionales", "camisetas nacionales", "botines"];
 
     return(
