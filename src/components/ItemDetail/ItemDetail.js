@@ -1,3 +1,4 @@
+import './itemDetail.css'
 import { useState } from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
@@ -17,18 +18,18 @@ const ItemDetail = ({data}) => {
 
     console.log("Data desde ItemDetail: ", data)
     return (
-        <div className='detail-product-container'>
-            <div className="detail-product-image">
+        <div className='container'>
+            <div className="imagen">
                 <img src={`/${data.image}`} alt="imgProduct"/>
             </div>
-            <div className="detail-product-info">
-                <div className='detail-product-info__title'>
+            <div>
+                <div>
                     <h2>{data.title}</h2>
                     <FavoriteBorderIcon  />
                 </div>
                 <p>{data.price}</p>
                 <span>3 Cuotas sin interés de $ {data.price / 3}</span>
-                <div style={{padding:10}}>
+                <div   className="detail" style={{padding:10}}>
                     <label>Selecciona tu talle</label>
                     <Select
                         className='select-custom'

@@ -1,6 +1,6 @@
+import './itemDetailContainer.css'
 import { useEffect, useState} from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import productos from '../../utils/prodMock'
 import { useParams, useNavigate } from "react-router-dom"
 import { doc, getDoc } from 'firebase/firestore'
 import db from "../../utils/firebaseConfig"
@@ -32,7 +32,7 @@ const ItemDetailContainer = () => {
 
     return(
         <>
-            <ItemDetail data={product}/>
+            <ItemDetail className='div' data={product}/>
         </>
     )
 }

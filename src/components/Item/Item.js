@@ -21,24 +21,21 @@ const CardItem = ({ image, title, price, stock, id }) => {
     const [count, setCount] = useState(1)
 
     return(
-        <Card sx={{ minWidth: 275, height: 550 }} className="card-item-container">
+        <Card sx={{ minWidth: 275, height: 450 }} className="card-item-container">
             <CardContent>
                 <div className="card-item">
                     <div className="card-item__img-box" style={orden}>
                         <img src={`/${image}`} alt={"producto"} style={imagen}/> 
-                        <Button variant={'contained'} className="card-btn-details">
-                            <Link to={`/product/${id}`} style={enlaces}>Ver Detalle</Link>
-                        </Button>
                     </div>
                     <div className='card-item__data-box'>
                         <div className='card-info-data' style={orden}>
                             <p>{title}</p>
                             <span>$ {price}</span>
+                            <p>Unidades disponibles: {stock}</p>
+                            <Button variant={'contained'} className="card-btn-details">
+                            <Link to={`/product/${id}`} style={enlaces}>Ver Detalle</Link>
+                        </Button>
                         </div>
-                        <Button variant={'contained'} className="card-item-button">Comprar</Button>
-                    </div>
-                    <div style={orden}>
-                        <p>Unidades disponibles: {stock}</p>
                     </div>
                 </div>
             </CardContent>

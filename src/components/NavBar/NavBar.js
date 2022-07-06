@@ -6,16 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { AppBar, Toolbar } from '@mui/material';
 
 
-let estilos={
-    color:'white',
-    backgroundColor:'#189AB4',
-    textDecoration: 'none',
-}
 
-let alineados={
-    display: 'inline',
-    color:'#05445E',
-}
 let logo ={
     fontFamily:'fantasy',
     color:'black',
@@ -27,7 +18,7 @@ const NavBar = () => {
     return(
         <AppBar position="static" className='header-primary'>
             <Toolbar>
-                <div className='navbar-header' style={logo}>
+                <div className='navbar-header'>
                     <Link to='/' style={{textDecoration:'none'}}>
                         <h1 style={logo}>SportsHub</h1>
                     </Link>
@@ -38,11 +29,10 @@ const NavBar = () => {
                             <li className="nav-item">
                                 <Button 
                                     disableRipple
-                                    style={{ backgroundColor: 'transparent' }} 
                                     variant='text' 
                                     className='navbar__btn'
                                 >
-                                    <Link to={`/products/${cat}`} style={estilos}>{cat}</Link>
+                                    <Link to={`/products/${cat}`}>{cat}</Link>
                                 </Button>    
                             </li>)
                     })}
@@ -53,7 +43,7 @@ const NavBar = () => {
                             variant='text' 
                             className='navbar__btn'
                         >
-                            <Link to="/contacto" style={estilos}>About Us</Link>
+                            <Link to="/contacto">About Us</Link>
                         </Button>
                     </li>
                 </ul>

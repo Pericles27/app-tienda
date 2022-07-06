@@ -1,15 +1,28 @@
+.header-primary{
+    background-color: beige;
+}
 .navbar {
     float: left;
     width: 100%;
-    border-bottom: #ccc;
     display: flex;
+    min-height: 75px;
 }
-
+.logo {
+    font-family:'fantasy';
+    color:'black';
+    font-size: 40px;
+}
+.nav-item{
+    list-style-type: none;
+}
+.nav-item .Link{
+    text-decoration: 'none';
+}
 .header-primary .navbar .navbar__btn {
     text-transform: none;
     font-weight: 400;
-    font-size: 16px;
-    color: black;
+    font-size: 20px;
+    color: white;
 }
 .header-primary .navbar .navbar__btn:hover {
     font-weight: 600;
@@ -30,10 +43,10 @@
 }
 
 .header-primary .navbar .navbar__btn a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
-
+/*cart*/
 .item-cart-prod {
     float: left;
     width: 355px;
@@ -45,7 +58,6 @@
 .cart-prod__image {
     width: 20%;
 }
-
 .cart-prod__image img {
     width: 100%;
 }

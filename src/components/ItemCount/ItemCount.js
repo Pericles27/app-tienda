@@ -7,7 +7,7 @@ const Counter = ({stock,cantidad, setCantidad, setShowButton,data}) => {
     const { addProductToCart } = useContext(CartContext)
     const click = ()=>{
         setShowButton(true);
-        addProductToCart (data)
+        addProductToCart (data, cantidad)
     }
     
     const addCount = () => {
