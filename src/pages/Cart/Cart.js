@@ -70,13 +70,13 @@ const Cart = () => {
                             <img src={`/${image}`} alt='producto'/>
                         </div>
                         <div>
-                            <p>{title}</p>
+                            <p>producto: {title}</p>
                         </div>
                         <div>
-                            <p>$ {price}</p>
+                            <p>precio por unidad: $ {price}</p>
                         </div>
                         <div>
-                            <p>{cantidad}</p>
+                            <p>cantidad: {cantidad}</p>
                         </div>
                         <div>
                             <p>Precio total {title}: ${cantidad*price}</p>
